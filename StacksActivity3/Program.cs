@@ -29,11 +29,11 @@ namespace StacksActivity3
             }
 
             // Remove an item from the stack
-            public string Pop()
+            public string? Pop()
             {
                 if (StackPointer <= -1)
                 {
-                    return "";
+                    return null;
                 }
 
                 string item = Contents[StackPointer];
@@ -44,11 +44,11 @@ namespace StacksActivity3
             }
 
             // Look at the top item in the stack without removing it
-            public string Peek()
+            public string? Peek()
             {
                 if (StackPointer <= -1)
                 {
-                    return "";
+                    return null;
                 }
 
                 return Contents[StackPointer];
@@ -67,7 +67,7 @@ namespace StacksActivity3
             Action = MyStack.Push("Dave");
 
             // How to pop from the stack (stack underflow returns null)
-            string Item;
+            string? Item;
             Item = MyStack.Pop();
 
             Console.ReadKey();
